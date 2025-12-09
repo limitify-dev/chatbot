@@ -2,11 +2,11 @@ import axios from "axios";
 
 // Configure your API endpoint here
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  import.meta.env.VITE_API_URL || "https://ai-itetero.onrender.com";
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 30000,
   headers: {
     "Content-Type": "application/json",
   },
@@ -19,8 +19,10 @@ const apiClient = axios.create({
  */
 export const sendMessage = async (message) => {
   try {
-    const response = await apiClient.post("/chat", {
-      message: message.trim(),
+    const response = await apiClient.get("/chat", {
+      params: {
+        query: message.trim(),
+      },
     });
 
     // Adjust the response path based on your API structure
