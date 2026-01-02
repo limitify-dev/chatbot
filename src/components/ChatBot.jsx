@@ -6,7 +6,7 @@ function ChatBot() {
     const [messages, setMessages] = useState([
         {
             id: 1,
-            text: 'Muraho! Ndi Itetero, umufasha wawe w\'ubwenge bw\'ubukorano. Nkora iki kugira ngo ngufashe uyu munsi?',
+            text: 'Muraho! Ndi Itetero, umufasha wawe w\'ubwenge bw\'ubukorano. Nkore iki kugira ngo ngufashe uyu munsi?',
             sender: 'bot',
             timestamp: new Date(),
         },
