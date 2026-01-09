@@ -61,7 +61,7 @@ function ChatBot() {
             // Add error message to the chat
             const errorMessage = {
                 id: messages.length + 2,
-                text: `Sorry, I encountered an error: ${err.message}. Please try again.`,
+                text: `Ihangane gato, habaye ikibazo cyo kohereza ubutumwa`,
                 sender: 'bot',
                 timestamp: new Date(),
             };
