@@ -74,6 +74,20 @@ function ChatBot() {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100vh', backgroundColor: '#ffffff' }}>
+            <style>
+                {`
+                    @keyframes typingDot {
+                        0%, 60%, 100% {
+                            transform: translateY(0);
+                            opacity: 0.35;
+                        }
+                        30% {
+                            transform: translateY(-5px);
+                            opacity: 1;
+                        }
+                    }
+                `}
+            </style>
             {/* Header */}
             <div style={{
                 display: 'flex',
@@ -209,9 +223,39 @@ function ChatBot() {
                                 </div>
                                 <div style={{ flex: 1, paddingTop: '6px' }}>
                                     <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
-                                        <span className="w-2 h-2 rounded-full animate-typing" style={{ backgroundColor: '#0ea5e9' }}></span>
-                                        <span className="w-2 h-2 rounded-full animate-typing" style={{ backgroundColor: '#0ea5e9', animationDelay: '0.2s' }}></span>
-                                        <span className="w-2 h-2 rounded-full animate-typing" style={{ backgroundColor: '#0ea5e9', animationDelay: '0.4s' }}></span>
+                                        <span
+                                            style={{
+                                                width: '8px',
+                                                height: '8px',
+                                                borderRadius: '9999px',
+                                                backgroundColor: '#0ea5e9',
+                                                display: 'inline-block',
+                                                animation: 'typingDot 1s ease-in-out infinite',
+                                                animationDelay: '0s',
+                                            }}
+                                        ></span>
+                                        <span
+                                            style={{
+                                                width: '8px',
+                                                height: '8px',
+                                                borderRadius: '9999px',
+                                                backgroundColor: '#0ea5e9',
+                                                display: 'inline-block',
+                                                animation: 'typingDot 1s ease-in-out infinite',
+                                                animationDelay: '0.2s',
+                                            }}
+                                        ></span>
+                                        <span
+                                            style={{
+                                                width: '8px',
+                                                height: '8px',
+                                                borderRadius: '9999px',
+                                                backgroundColor: '#0ea5e9',
+                                                display: 'inline-block',
+                                                animation: 'typingDot 1s ease-in-out infinite',
+                                                animationDelay: '0.4s',
+                                            }}
+                                        ></span>
                                     </div>
                                 </div>
                             </div>
