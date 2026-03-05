@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Configure your API endpoint here
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "https://ai-itetero.onrender.com";
+  import.meta.env.VITE_API_URL || "https://ai.itetero.cloud-ip.cc";
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
@@ -29,7 +29,7 @@ export const sendMessage = async (message) => {
   } catch (error) {
     console.error("Error sending message:", error);
     throw new Error(
-      error.response?.data?.message || "Failed to get response from chatbot"
+      error.response?.data?.message || "Failed to get response from chatbot",
     );
   }
 };
